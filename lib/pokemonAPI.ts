@@ -6,3 +6,8 @@ export async function getPokemonList() {
   return data.results;
 }
 
+export async function getPokemon(name: string) { 
+  const response = await fetch(`${BASE_URL}/pokemon/${name}`);
+  const data = await response.json();
+  return data;
+}
